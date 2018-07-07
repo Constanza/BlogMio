@@ -1,0 +1,30 @@
+
+entity Usuario {
+
+	nombre String,
+	apellido String,
+	celular String,
+	phoneNumber String,
+	direccion String,
+	edad Int,
+    email String,
+	rut String
+}
+
+entity Contrato {
+	activo Boolean,
+	descripcion String,
+	fecha Date
+}
+
+
+
+relationship OneToOne {
+	Usuario{rut} to Contrato
+}
+
+
+dto * with mapstruct
+
+// Set an angular suffix
+angularSuffix * with mySuffix
